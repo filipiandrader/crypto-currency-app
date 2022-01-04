@@ -1,6 +1,6 @@
 package com.far.cryptocurrency.data.remote.dto
 
-
+import com.far.cryptocurrency.domain.model.Coin
 import com.google.gson.annotations.SerializedName
 
 data class CoinDto(
@@ -19,3 +19,13 @@ data class CoinDto(
     @SerializedName("type")
     val type: String
 )
+
+fun CoinDto.toCoin(): Coin {
+    return Coin(
+        id = id,
+        isActive = isActive,
+        name = name,
+        rank = rank,
+        symbol = symbol
+    )
+}

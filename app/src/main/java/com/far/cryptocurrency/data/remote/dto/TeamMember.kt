@@ -3,7 +3,7 @@ package com.far.cryptocurrency.data.remote.dto
 
 import com.google.gson.annotations.SerializedName
 
-data class Team(
+data class TeamMember(
     @SerializedName("id")
     val id: String,
     @SerializedName("name")
