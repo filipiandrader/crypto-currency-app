@@ -5,6 +5,12 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import com.far.cryptocurrency.common.Constants
+import com.far.cryptocurrency.presentation.detail.CoinDetailScreen
+import com.far.cryptocurrency.presentation.list.CoinListScreen
 import com.far.cryptocurrency.presentation.theme.CryptocurrencyAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -13,7 +19,22 @@ class MainActivity : ComponentActivity() {
         setContent {
             CryptocurrencyAppTheme {
                 Surface(color = MaterialTheme.colors.background) {
-
+                    val navController = rememberNavController()
+                    NavHost(
+                        navController = navController,
+                        startDestination = RouteScreen.CoinListScreen.route
+                    ) {
+                        composable(
+                            route = RouteScreen.CoinListScreen.route
+                        ) {
+                            CoinListScreen(navController)
+                        }
+                        composable(
+                            route = RouteScreen.CoinDetailScreen.route + "/{${Constants.PARAM_COIN_ID}"
+                        ) {
+                            CoinDetailScreen()
+                        }
+                    }
                 }
             }
         }
