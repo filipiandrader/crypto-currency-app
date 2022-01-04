@@ -1,4 +1,4 @@
-package com.far.cryptocurrency.theme
+package com.far.cryptocurrency.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 

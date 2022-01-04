@@ -1,4 +1,4 @@
-package com.far.cryptocurrency.theme
+package com.far.cryptocurrency.presentation.theme
 
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
