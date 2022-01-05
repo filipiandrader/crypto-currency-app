@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.far.cryptocurrency">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:name=".CryptoCurrencyApplication"
         android:allowBackup="true"
@@ -9,7 +11,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.CryptoCurrency"
+        android:theme="@style/Theme.Cryptocurrency"
         android:fullBackupContent="true">
         <activity
             android:name=".presentation.MainActivity"

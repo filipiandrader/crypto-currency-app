@@ -12,7 +12,9 @@ import com.far.cryptocurrency.common.Constants
 import com.far.cryptocurrency.presentation.detail.CoinDetailScreen
 import com.far.cryptocurrency.presentation.list.CoinListScreen
 import com.far.cryptocurrency.presentation.theme.CryptocurrencyAppTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
