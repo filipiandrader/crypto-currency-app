@@ -1,9 +1,7 @@
 package com.far.cryptocurrency.domain.useCase.getCoin
 
 import com.far.cryptocurrency.common.Resource
-import com.far.cryptocurrency.data.remote.dto.toCoin
 import com.far.cryptocurrency.data.remote.dto.toCoinDetail
-import com.far.cryptocurrency.domain.model.Coin
 import com.far.cryptocurrency.domain.model.CoinDetail
 import com.far.cryptocurrency.domain.repository.CoinRepository
 import kotlinx.coroutines.flow.Flow

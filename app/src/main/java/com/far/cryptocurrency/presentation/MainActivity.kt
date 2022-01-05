@@ -32,7 +32,7 @@ class MainActivity : ComponentActivity() {
                             CoinListScreen(navController)
                         }
                         composable(
-                            route = RouteScreen.CoinDetailScreen.route + "/{${Constants.PARAM_COIN_ID}"
+                            route = RouteScreen.CoinDetailScreen.route + "/{${Constants.PARAM_COIN_ID}}"
                         ) {
                             CoinDetailScreen()
                         }

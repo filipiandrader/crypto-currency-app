@@ -28,7 +28,7 @@ fun CoinDetailScreen(
         getCoinState.coins?.let { coin ->
             LazyColumn(
                 modifier = Modifier.fillMaxSize(),
-                contentPadding = PaddingValues(24.dp)
+                contentPadding = PaddingValues(16.dp)
             ) {
                 item {
                     Row(
@@ -51,17 +51,19 @@ fun CoinDetailScreen(
                                 .weight(2f)
                         )
                     }
-                    Spacer(modifier = Modifier.height(16.dp))
+                    Spacer(modifier = Modifier.height(8.dp))
                     Text(
                         text = coin.description,
-                        style = MaterialTheme.typography.body2
+                        style = MaterialTheme.typography.body1
                     )
-                    Spacer(modifier = Modifier.height(24.dp))
+                    Spacer(modifier = Modifier.height(16.dp))
+                    Divider()
+                    Spacer(modifier = Modifier.height(8.dp))
                     Text(
                         text = "Tags",
                         style = MaterialTheme.typography.h3
                     )
-                    Spacer(modifier = Modifier.height(16.dp))
+                    Spacer(modifier = Modifier.height(8.dp))
                     FlowRow(
                         mainAxisSpacing = 10.dp,
                         crossAxisSpacing = 10.dp,
@@ -69,12 +71,13 @@ fun CoinDetailScreen(
                     ) {
                         coin.tags.forEach { tag -> CoinTag(tag = tag) }
                     }
-                    Spacer(modifier = Modifier.height(24.dp))
+                    Spacer(modifier = Modifier.height(16.dp))
+                    Divider()
+                    Spacer(modifier = Modifier.height(8.dp))
                     Text(
                         text = "Team Members",
                         style = MaterialTheme.typography.h3
                     )
-                    Spacer(modifier = Modifier.height(16.dp))
                 }
                 items(coin.team) { teamMember ->
                     TeamMemberListItem(
