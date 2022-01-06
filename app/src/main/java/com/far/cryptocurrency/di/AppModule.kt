@@ -4,6 +4,8 @@ import com.far.cryptocurrency.common.Constants
 import com.far.cryptocurrency.data.remote.CoinPaprikaApi
 import com.far.cryptocurrency.data.repository.CoinRepositoryImpl
 import com.far.cryptocurrency.domain.repository.CoinRepository
+import com.far.cryptocurrency.domain.useCase.getCoin.GetCoinUseCase
+import com.far.cryptocurrency.domain.useCase.getCoins.GetCoinsUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -31,4 +33,12 @@ object AppModule {
     fun provideCoinRepository(api: CoinPaprikaApi): CoinRepository {
         return CoinRepositoryImpl(api)
     }
+
+    @Provides
+    @Singleton
+    fun provideGetCoinUseCase(repository: CoinRepository) = GetCoinUseCase(repository)
+
+    @Provides
+    @Singleton
+    fun provideGetCoinsUseCase(repository: CoinRepository) = GetCoinsUseCase(repository)
 }
