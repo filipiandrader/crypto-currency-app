@@ -4,6 +4,8 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -12,13 +14,14 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.NavController
 import com.far.cryptocurrency.presentation.detail.components.CoinTag
 import com.far.cryptocurrency.presentation.detail.components.TeamMemberListItem
-import com.far.cryptocurrency.presentation.theme.DarkGray900
 import com.google.accompanist.flowlayout.FlowRow
 
 @Composable
 fun CoinDetailScreen(
+    navController: NavController,
     viewModel: CoinDetailViewModel = hiltViewModel()
 ) {
     val getCoinState = viewModel.getCoinState.value
@@ -28,29 +31,35 @@ fun CoinDetailScreen(
                 modifier = Modifier.fillMaxSize(),
             ) {
                 item {
-                    TopAppBar(title = {
-                        Row(
-                            modifier = Modifier.fillMaxWidth(),
-                            horizontalArrangement = Arrangement.SpaceBetween
-                        ) {
-                            Text(
-                                text = "${coin.rank}. ${coin.name} (${coin.symbol})",
-                                style = MaterialTheme.typography.h2,
-                                modifier = Modifier.weight(8f)
-                            )
-                            Text(
-                                text = if (coin.isActive) "active" else "inactive",
-                                color = if (coin.isActive) Color.Green else Color.Red,
-                                fontStyle = FontStyle.Italic,
-                                textAlign = TextAlign.End,
-                                style = MaterialTheme.typography.body2,
-                                modifier = Modifier
-                                    .align(Alignment.CenterVertically)
-                                    .weight(2f)
-                                    .absolutePadding(right = 8.dp)
-                            )
-                        }
-                    })
+                    TopAppBar(
+                        navigationIcon = {
+                            IconButton(onClick = { navController.popBackStack() }) {
+                                Icon(Icons.Filled.ArrowBack, "back-button")
+                            }
+                        },
+                        title = {
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.SpaceBetween
+                            ) {
+                                Text(
+                                    text = "${coin.rank}. ${coin.name} (${coin.symbol})",
+                                    style = MaterialTheme.typography.h2,
+                                    modifier = Modifier.weight(8f)
+                                )
+                                Text(
+                                    text = if (coin.isActive) "active" else "inactive",
+                                    color = if (coin.isActive) Color.Green else Color.Red,
+                                    fontStyle = FontStyle.Italic,
+                                    textAlign = TextAlign.End,
+                                    style = MaterialTheme.typography.body2,
+                                    modifier = Modifier
+                                        .align(Alignment.CenterVertically)
+                                        .weight(2f)
+                                        .absolutePadding(right = 8.dp)
+                                )
+                            }
+                        })
                 }
                 item {
                     Spacer(modifier = Modifier.height(8.dp))
