@@ -1,4 +1,4 @@
-package com.far.cryptocurrency.presentation
+package com.far.cryptocurrency.presentation.route
 
 sealed class RouteScreen(val route: String) {
     object CoinListScreen: RouteScreen("coin_list_screen")

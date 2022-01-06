@@ -1,4 +1,4 @@
-package com.far.cryptocurrency.domain.useCase.getCoins
+package com.far.cryptocurrency.domain.usecase.getCoins
 
 import com.far.cryptocurrency.common.UseCase
 import com.far.cryptocurrency.data.remote.dto.CoinDto

@@ -1,4 +1,4 @@
-package com.far.cryptocurrency.presentation.detail
+package com.far.cryptocurrency.presentation.detail.state
 
 import com.far.cryptocurrency.domain.model.CoinDetail
 

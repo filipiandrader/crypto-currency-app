@@ -1,11 +1,12 @@
-package com.far.cryptocurrency.presentation.list
+package com.far.cryptocurrency.presentation.list.viewmodel
 
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import com.far.cryptocurrency.common.Constants
 import com.far.cryptocurrency.data.remote.dto.toCoin
-import com.far.cryptocurrency.domain.useCase.getCoins.GetCoinsUseCase
+import com.far.cryptocurrency.domain.usecase.getCoins.GetCoinsUseCase
+import com.far.cryptocurrency.presentation.list.state.CoinListState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

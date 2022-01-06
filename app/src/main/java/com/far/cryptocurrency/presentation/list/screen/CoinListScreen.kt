@@ -11,8 +11,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
-import com.far.cryptocurrency.presentation.RouteScreen
+import com.far.cryptocurrency.presentation.route.RouteScreen
 import com.far.cryptocurrency.presentation.list.components.CoinListItem
+import com.far.cryptocurrency.presentation.list.viewmodel.CoinListViewModel
 import com.far.cryptocurrency.presentation.theme.DarkGray900
 
 @Composable

@@ -1,4 +1,4 @@
-package com.far.cryptocurrency.presentation.detail
+package com.far.cryptocurrency.presentation.detail.viewmodel
 
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
@@ -7,7 +7,8 @@ import androidx.lifecycle.ViewModel
 import com.far.cryptocurrency.common.Constants.DEFAULT_ERROR
 import com.far.cryptocurrency.common.Constants.PARAM_COIN_ID
 import com.far.cryptocurrency.data.remote.dto.toCoinDetail
-import com.far.cryptocurrency.domain.useCase.getCoin.GetCoinUseCase
+import com.far.cryptocurrency.domain.usecase.getCoin.GetCoinUseCase
+import com.far.cryptocurrency.presentation.detail.state.CoinDetailState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

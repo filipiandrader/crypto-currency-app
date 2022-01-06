@@ -1,4 +1,4 @@
-package com.far.cryptocurrency.data.remote
+package com.far.cryptocurrency.data.remote.service
 
 import com.far.cryptocurrency.data.remote.dto.CoinDetailDto
 import com.far.cryptocurrency.data.remote.dto.CoinDto

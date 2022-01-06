@@ -1,6 +1,6 @@
 package com.far.cryptocurrency.data.repository
 
-import com.far.cryptocurrency.data.remote.CoinPaprikaApi
+import com.far.cryptocurrency.data.remote.service.CoinPaprikaApi
 import com.far.cryptocurrency.domain.repository.CoinRepository
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject

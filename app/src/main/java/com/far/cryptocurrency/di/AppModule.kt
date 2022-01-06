@@ -1,11 +1,11 @@
 package com.far.cryptocurrency.di
 
 import com.far.cryptocurrency.common.Constants
-import com.far.cryptocurrency.data.remote.CoinPaprikaApi
+import com.far.cryptocurrency.data.remote.service.CoinPaprikaApi
 import com.far.cryptocurrency.data.repository.CoinRepositoryImpl
 import com.far.cryptocurrency.domain.repository.CoinRepository
-import com.far.cryptocurrency.domain.useCase.getCoin.GetCoinUseCase
-import com.far.cryptocurrency.domain.useCase.getCoins.GetCoinsUseCase
+import com.far.cryptocurrency.domain.usecase.getCoin.GetCoinUseCase
+import com.far.cryptocurrency.domain.usecase.getCoins.GetCoinsUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
