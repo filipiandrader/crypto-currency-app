@@ -3,7 +3,6 @@ package com.far.cryptocurrency.presentation
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -12,6 +11,7 @@ import com.far.cryptocurrency.common.Constants
 import com.far.cryptocurrency.presentation.detail.CoinDetailScreen
 import com.far.cryptocurrency.presentation.list.CoinListScreen
 import com.far.cryptocurrency.presentation.theme.CryptocurrencyAppTheme
+import com.far.cryptocurrency.presentation.theme.DarkGray
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -20,7 +20,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             CryptocurrencyAppTheme {
-                Surface(color = MaterialTheme.colors.background) {
+                Surface(color = DarkGray) {
                     val navController = rememberNavController()
                     NavHost(
                         navController = navController,
