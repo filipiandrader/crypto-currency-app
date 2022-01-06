@@ -13,6 +13,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.far.cryptocurrency.presentation.RouteScreen
 import com.far.cryptocurrency.presentation.list.components.CoinListItem
+import com.far.cryptocurrency.presentation.theme.DarkGray900
 
 @Composable
 fun CoinListScreen(
@@ -23,7 +24,7 @@ fun CoinListScreen(
     Box(modifier = Modifier.fillMaxSize()) {
         LazyColumn(modifier = Modifier.fillMaxSize()) {
             item {
-                TopAppBar(title = { Text(text = "Crypto Currency") })
+                TopAppBar(backgroundColor = DarkGray900, title = { Text(text = "Crypto Currency") })
             }
             items(getCoinsState.coins) { coin ->
                 CoinListItem(

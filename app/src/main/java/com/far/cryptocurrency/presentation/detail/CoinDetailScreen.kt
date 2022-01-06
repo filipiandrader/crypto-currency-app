@@ -17,6 +17,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.far.cryptocurrency.presentation.detail.components.CoinTag
 import com.far.cryptocurrency.presentation.detail.components.TeamMemberListItem
+import com.far.cryptocurrency.presentation.theme.DarkGray900
 import com.google.accompanist.flowlayout.FlowRow
 
 @Composable
@@ -32,6 +33,7 @@ fun CoinDetailScreen(
             ) {
                 item {
                     TopAppBar(
+                        backgroundColor = DarkGray900,
                         navigationIcon = {
                             IconButton(onClick = { navController.popBackStack() }) {
                                 Icon(Icons.Filled.ArrowBack, "back-button")
