@@ -46,7 +46,7 @@ fun CoinDetailScreen(
                                 horizontalArrangement = Arrangement.SpaceBetween
                             ) {
                                 Text(
-                                    text = "${coin.rank}. ${coin.name} (${coin.symbol})",
+                                    text = "${coin.name} (${coin.symbol})",
                                     style = MaterialTheme.typography.h2,
                                     modifier = Modifier.weight(8f)
                                 )
@@ -62,7 +62,8 @@ fun CoinDetailScreen(
                                         .absolutePadding(right = 8.dp)
                                 )
                             }
-                        })
+                        }
+                    )
                 }
                 item {
                     Spacer(modifier = Modifier.height(8.dp))
