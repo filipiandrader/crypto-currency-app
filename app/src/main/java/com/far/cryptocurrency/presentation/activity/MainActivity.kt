@@ -10,8 +10,8 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.far.cryptocurrency.common.Constants
 import com.far.cryptocurrency.presentation.route.RouteScreen
-import com.far.cryptocurrency.presentation.detail.CoinDetailScreen
-import com.far.cryptocurrency.presentation.list.CoinListScreen
+import com.far.cryptocurrency.presentation.detail.screen.CoinDetailScreen
+import com.far.cryptocurrency.presentation.list.screen.CoinListScreen
 import com.far.cryptocurrency.presentation.theme.CryptocurrencyAppTheme
 import dagger.hilt.android.AndroidEntryPoint
 

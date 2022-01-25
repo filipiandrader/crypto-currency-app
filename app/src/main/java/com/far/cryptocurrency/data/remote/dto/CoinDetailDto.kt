@@ -1,6 +1,5 @@
 package com.far.cryptocurrency.data.remote.dto
 
-
 import com.far.cryptocurrency.domain.model.CoinDetail
 import com.google.gson.annotations.SerializedName
 

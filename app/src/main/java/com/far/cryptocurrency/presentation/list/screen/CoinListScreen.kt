@@ -1,4 +1,4 @@
-package com.far.cryptocurrency.presentation.list
+package com.far.cryptocurrency.presentation.list.screen
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
